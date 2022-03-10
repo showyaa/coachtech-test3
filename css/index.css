@@ -28,7 +28,6 @@
 }
 .nav1 li {
   display: inline-block;
-  margin-left: 20px;
   font-weight: bold;
 }
 .nav1 a {
@@ -63,8 +62,7 @@
   left: -100%;
   background-color: white;
   transition: 2s;
-  margin: 0 auto;
-  z-index: 50;
+  text-align: center;
 }
 .menu__line--top,.menu__line--middle,.menu__line--bottom {
   display: inline-block;
@@ -108,7 +106,7 @@
     display: none;
   }
   .nav2 {
-    display: block;
+    display: inline-block;
   }
   .menu {
     display: block;
