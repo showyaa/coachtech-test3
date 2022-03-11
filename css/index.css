@@ -9,15 +9,20 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
   z-index: 100;
+  padding: 15px 0;
 }
 .header__title {
-  font-weight: normal;
+  font-weight: bold;
+  margin-left: 20px;
 }
 .header__title a {
   text-decoration: none;
   color: black;
+  transition: 0.3s;
+}
+.header__title a:hover {
+  color: rgb(63, 62, 62);
 }
 .nav1 {
   margin: 0 0 0 auto;
@@ -29,10 +34,15 @@
 .nav1 li {
   display: inline-block;
   font-weight: bold;
+  margin-left: 20px;
 }
 .nav1 a {
   text-decoration: none;
   color: black;
+  transition: 0.3s;
+}
+.nav1 a:hover {
+  color: rgb(63, 62, 62);
 }
 
 .nav2 a {
@@ -52,7 +62,7 @@
   height: 32px;
   cursor: pointer;
   position: relative;
-  right: 50px;
+  right: 40px;
 }
 .nav2 {
   top: 0;
@@ -114,8 +124,15 @@
 }
 
 
+/* タイトル */
+body {
+  margin: 0;
+  font-family: "Yu Gothic";
+}
 .index__ttl {
   position: relative;
+  margin: 0;
+  background-color: #000;
 }
 .index__ttl-img img {
   width: 100%;
@@ -123,21 +140,335 @@
 }
 .index__ttl-txt {
   position: absolute;
-  top: 50%;
+  top: 42%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  text-align: center;
 }
 .index__ttl-ttl {
   white-space: nowrap;
   font-size: 50px;
 }
+.index__ttl-sub {
+  text-align: center;
+  font-weight: bold;
+}
 @media screen and (max-width: 768px) {
   .index__ttl-ttl {
     white-space: normal;
   }
+  .index__ttl-txt {
+    width: 75%;
+  }
 }
-.index__ttl-sub {
+@media screen and (max-width: 480px) {
+  .index__ttl-ttl {
+    font-size: 40px;
+    text-align: center;
+  }
+  .index__ttl-txt {
+    top: 30%;
+  }
+}
+.index__ttl-content {
+  color: white;
+  background-color: #000;
+  width: 85%;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+
+
+/* サービス */
+.service {
+  width: 85%;
+  margin: 0 auto;
+  padding-top: 40px;
+  padding-bottom: 50px;
+}
+.service__ttl {
+  text-align: center;
+}
+.service__items {
+  column-count: 2;
+}
+.service__item {
+  break-inside: avoid;
+}
+@media screen and (max-width: 768px) {
+  .service__items {
+    column-count: 1;
+  }
+}
+.service__item img {
+  width: 100%;
+}
+.service__item h3 {
+  margin: 0;
+}
+.service__item p {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 20px;
+}
+.service__btn a {
+  display: block;
+  text-decoration: none;
+  color: white;
   font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  background-color: red;
+  display: block;
+  width: 280px;
+  margin: 0 auto 0;
+  padding: 10px 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.service__btn a:hover {
+  background: rgb(250, 77, 77);
+}
+
+
+/* ニュース */
+.news {
+  background-color: #000;
+  padding: 40px 0;
+}
+.news__width {
+  width: 85%;
+  margin: 0 auto;
+}
+.news__ttl {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+.news__btn a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+  background-color: red;
+  text-align: center;
+  height: 20px;
+  margin-top: 20px;
+  width: 170px;
+  padding: 5px 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.news__btn a:hover {
+  background: rgb(250, 77, 77);
+}
+.news__content p {
+  background-color: white;
+  padding: 20px;
+}
+@media screen and (max-width: 768px) {
+  .news__content p {
+    padding: 10px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .news___content span {
+    font-size: 5px;
+  }
+}
+.news__content p:not(:last-child) {
+  margin-bottom: 10px;
+}
+.news__content span {
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+
+/* ブログ */
+.blog {
+  width: 85%;
+  margin: 0 auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.blog__items {
+  column-count: 3;
+}
+@media screen and (max-width: 768px) {
+  .blog__items {
+    column-count: 1;
+  }
+}
+.blog__item {
+  break-inside: avoid;
+}
+.blog__item img {
+  width: 100%;
+}
+.blog__item p {
+  font-size: 13px;
+  margin: 0;
+}
+.blog__item h3 {
+  font-size: 17px;
+  margin: 0;
+}
+.blog__btn a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  background-color: red;
+  width: 280px;
+  margin: 0 auto 0;
+  text-align: center;
+  padding: 10px 0;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: 0.3s;
+}
+.blog__btn a:hover {
+  background: rgb(250, 77, 77);
+}
+
+
+/* 会社概要・採用情報 */
+.company_recruit {
+  width: 100%;
+  color: white;
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  margin-bottom: 70px;
+}
+.company_recruit a {
+  color: white;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+}
+.company {
+  position: relative;
+  text-decoration: none;
+  background-color: red;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  transition: 0.3s;
+}
+.company:hover {
+  background: rgb(250, 77, 77);
+}
+.company span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.recruit {
+  position: relative;
+  text-decoration: none;
+  background-color: #000;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  transition: 0.3s;
+}
+.recruit:hover {
+  background-color: rgb(58, 57, 57);
+}
+.recruit span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+/* お問い合わせ */
+.contact {
+  background-color: rgb(243, 242, 242);
+  text-align: center;
+  padding-bottom: 80px;
+}
+.contact__txt h2 {
+  padding-top: 90px;
+  font-weight: bold;
+  font-size: 30px;
+}
+.contact__btn a {
+  text-decoration: none;
+  color: white;
+  background-color: red;
+  font-weight: bold;
+  width: 280px;
+  padding: 10px 95px;
+  transition: 0.3s;
+}
+.contact__btn a:hover {
+  background: rgb(250, 77, 77);
+}
+
+
+
+/* フッター */
+.footer {
+  background-color: #000;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  font-size: 14px;
+}
+.footer__nav ul {
+  list-style-type: none;
+}
+.footer__nav li {
+  display: inline-block;
+}
+.footer__nav li:not(:last-child) {
+  margin-right: 20px;
+}
+.footer__nav li span {
+  margin-left: 20px;
+}
+.footer__nav li a {
+  text-decoration: none;
+  color: inherit;
+  transition: 0.2s;
+}
+.footer__nav li a:hover {
+  color: rgb(156, 156, 156);
+}
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 10px 100px;
+  }
+  .footer__nav li {
+    display: block;
+    text-align: center;
+  }
+  .footer__nav li:not(:last-child) {
+    margin-bottom: 10px;
+    margin-left: 20px;
+  }
+  .footer__nav li span {
+    display: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  .footer {
+    text-align: center;
+    display: block;
+  }
+  .footer__nav li {
+    padding-right: 25px;
+  }
+  .footer__nav li:not(:last-child) {
+    margin-bottom: 10px;
+    margin-left: 20px;
+  }
 }

@@ -1,0 +1,263 @@
+/* ヘッダー */
+.header {
+  top: 0;
+  width: 100%;
+  height: 40px;
+  position: relative;
+  position: fixed;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  padding: 15px 0;
+}
+.header__title {
+  font-weight: bold;
+  margin-left: 20px;
+}
+.header__title a {
+  text-decoration: none;
+  color: black;
+  transition: 0.3s;
+}
+.header__title a:hover {
+  color: rgb(63, 62, 62);
+}
+.nav1 {
+  margin: 0 0 0 auto;
+  padding-right: 50px;
+}
+.nav1 ul {
+  list-style: none;
+}
+.nav1 li {
+  display: inline-block;
+  font-weight: bold;
+  margin-left: 20px;
+}
+.nav1 a {
+  text-decoration: none;
+  color: black;
+  transition: 0.3s;
+}
+.nav1 a:hover {
+  color: rgb(63, 62, 62);
+}
+
+.nav2 a {
+  text-decoration: none;
+  color: blue;
+}
+.nav2 ul {
+  padding-top: 80px;
+}
+.nav2 ul li {
+  list-style-type: none;
+  margin-top: 50px;
+}
+.menu {
+  display: inline-block;
+  width: 36px;
+  height: 32px;
+  cursor: pointer;
+  position: relative;
+  right: 40px;
+}
+.nav2 {
+  top: 0;
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  left: -100%;
+  background-color: white;
+  transition: 2s;
+  text-align: center;
+}
+.menu__line--top,.menu__line--middle,.menu__line--bottom {
+  display: inline-block;
+  width: 100%;
+  height: 4px;
+  background-color: #000;
+  position: absolute;
+  transition: 1s;
+}
+.menu__line--top {
+  top: 0;
+}
+.menu__line--middle {
+  top: 14px;
+}
+.menu__line--bottom {
+  bottom: 0;
+}
+.menu.open span:nth-of-type(1) {
+  top: 14px;
+  transform: rotate(45deg);
+}
+.menu.open span:nth-of-type(2) {
+  opacity: 0;
+}
+.menu.open span:nth-of-type(3) {
+  top: 14px;
+  transform: rotate(-45deg);
+}
+.nav2 {
+  display: none;
+}
+.menu {
+  display: none;
+}
+.in {
+  transform: translateX(100%);
+}
+@media screen and (max-width: 768px) {
+  .nav1 {
+    display: none;
+  }
+  .nav2 {
+    display: inline-block;
+  }
+  .menu {
+    display: block;
+  }
+}
+
+
+body {
+  margin: 0;
+  font-family: "Yu Gothic";
+}
+
+
+
+/* タイトル */
+.company__ttl {
+  position: relative;
+}
+.company__ttl-txt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: white;
+  transform: translate(-50%, -50%);
+  margin-top: 30px;
+}
+.company__ttl-img img {
+  margin-top: 30px;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+
+
+/* コンテンツ */
+.company__content {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+.company__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.company__table th, td {
+  border-top: 1px solid black;
+  padding: 20px 0;
+}
+.company__table th:last-of-type {
+  border-bottom: 1px solid black;
+}
+.company__table td:last-of-type {
+  border-bottom: 1px solid black;
+}
+
+
+
+/* お問い合わせ */
+.contact {
+  background-color: rgb(243, 242, 242);
+  text-align: center;
+  padding-bottom: 80px;
+}
+.contact__txt h2 {
+  padding-top: 90px;
+  font-weight: bold;
+  font-size: 30px;
+}
+.contact__btn a {
+  text-decoration: none;
+  color: white;
+  background-color: red;
+  font-weight: bold;
+  width: 280px;
+  padding: 10px 95px;
+  transition: 0.3s;
+}
+.contact__btn a:hover {
+  background: rgb(250, 77, 77);
+}
+
+
+
+/* フッター */
+.footer {
+  background-color: #000;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  font-size: 14px;
+}
+.footer__nav ul {
+  list-style-type: none;
+}
+.footer__nav li {
+  display: inline-block;
+}
+.footer__nav li:not(:last-child) {
+  margin-right: 20px;
+}
+.footer__nav li span {
+  margin-left: 20px;
+}
+.footer__nav li a {
+  text-decoration: none;
+  color: inherit;
+  transition: 0.2s;
+}
+.footer__nav li a:hover {
+  color: rgb(156, 156, 156);
+}
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 10px 100px;
+  }
+  .footer__nav li {
+    display: block;
+    text-align: center;
+  }
+  .footer__nav li:not(:last-child) {
+    margin-bottom: 10px;
+    margin-left: 20px;
+  }
+  .footer__nav li span {
+    display: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  .footer {
+    text-align: center;
+    display: block;
+  }
+  .footer__nav li {
+    padding-right: 25px;
+  }
+  .footer__nav li:not(:last-child) {
+    margin-bottom: 10px;
+    margin-left: 20px;
+  }
+}
