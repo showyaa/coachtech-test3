@@ -159,6 +159,15 @@ body {
   margin-top: 80px;
   margin-bottom: 80px;
 }
+.news__content a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.news__content a:hover {
+  color: rgb(105, 105, 105);
+}
 .news__content p {
   border: 1px solid black;
   padding: 20px;

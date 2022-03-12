@@ -262,9 +262,18 @@ body {
 .news__btn a:hover {
   background: rgb(250, 77, 77);
 }
+.news__content a {
+  text-decoration: none;
+  color: black;
+}
 .news__content p {
   background-color: white;
   padding: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.news__content p:hover {
+  background-color: rgb(153, 152, 152);
 }
 @media screen and (max-width: 768px) {
   .news__content p {
@@ -305,6 +314,18 @@ body {
 }
 .blog__item img {
   width: 100%;
+  transition: 0.3s;
+}
+.blog__item img:hover {
+  opacity: 0.8;
+}
+.blog__item a {
+  text-decoration: none;
+  color: inherit;
+  transition: 0.3s;
+}
+.blog__item a:nth-of-type(2):hover {
+  color: rgb(73, 73, 73);
 }
 .blog__item p {
   font-size: 13px;

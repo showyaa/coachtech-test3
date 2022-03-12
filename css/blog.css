@@ -170,8 +170,21 @@ body {
 .blog__content-item {
   break-inside: avoid;
 }
+.blog__content-item a {
+  text-decoration: none;
+  color: inherit;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.blog__content-item a:nth-of-type(2):hover {
+  color: rgb(87, 86, 86);
+}
 .blog__content-item img {
   width: 100%;
+  transition: 0.3s;
+}
+.blog__content-item img:hover {
+  opacity: 0.8;
 }
 .blog__content-item p {
   margin: 0;
